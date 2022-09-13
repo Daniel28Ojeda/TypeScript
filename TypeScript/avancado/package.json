@@ -1,0 +1,15 @@
+{
+    "name": "avancado",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "npx tsc && node ./dist/debug.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^4.7.4"
+    }
+}

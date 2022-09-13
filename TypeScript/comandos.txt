@@ -1,0 +1,71 @@
+- Instalação:
+Codigo no terminal
+
+- Criar package.json
+npm init
+
+- Instalar typeScript
+npm install typescript
+
+- Cria arquivo tsconfig.json de configurações do typescript
+npx tsc --init
+mudar dentro desta arquivo a config "module" de "commonjs" para ESNext para usar as configurações do typescript mais atual
+tirar o comentario da linha "outdir" - outdir cria os arquivos js despois da transpilação
+
+----------------------------------------------------------------------------------------
+
+- Importar JS no HTML
+Ao importar o script JS no HTML é aconselhável incluir a tag type="module" dentro do script pois existem funções q só rodam com isso
+
+----------------------------------------------------------------------------------------
+
+- Criar arquivo .JS:
+npx tsc
+npx tsc -w
+  -w ativa hotreload 
+
+----------------------------------------------------------------------------------------
+
+- Executar arquivos:
+Node só executa arquivos .JS e não .TS
+Necessário converter e depois executar o .js com o comando:
+node app.js
+ou
+node ./destino/app.js
+
+----------------------------------------------------------------------------------------
+
+- Instalação pacote ts-node-dev
+npm install ts-node-dev -D
+flag -D para setar como somente pacote de desenvolvimento e nada para produção
+
+----------------------------------------------------------------------------------------
+
+- Executar o arquivo .TS:
+Primeiro instalar o pacote ts-node-dev e rodar o comando:
+npx ts-node-dev app.ts
+
+- Respawn
+Para toda vez q salvar o codigo ts ele se auto executar
+npx ts-node-dev --respawn app.ts
+
+- Criar Script de automação
+Dentro do package.json em scripts criar um nome (exemplo "start")
+
+- Executar o script a primeira vez
+npm run start
+
+- Habilitar o modo hotreload
+npx tsc -w
+
+----------------------------------------------------------------------------------------
+
+- Debug:
+Habilitar no tsconfig a opção "sourceMap"
+O restante está no arquiv debug.ts
+
+----------------------------------------------------------------------------------------
+
+- Degug com node.js
+Criar um script de teste no package.json
+"test": "npx tsc && node ./dist/debug.js"
